@@ -2,7 +2,7 @@ name: Windows
 
 on: [push]
 
-job:
+jobs:
     build:
         name: MSVC
         runs-on: 'windows-latest'
