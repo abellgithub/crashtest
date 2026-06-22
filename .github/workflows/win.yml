@@ -1,0 +1,19 @@
+name: Windows
+
+on: [push]
+
+job:
+    build:
+        name: MSVC
+        runs-on: 'windows-latest'
+        steps:
+        - uses: actions/checkout@v6
+        - uses: ilammy/msvc-dev-cmd@v1
+        - name: compile
+          run: |
+            cl /std:c++17 /Fe:crashtest t.cpp
+        - name: run
+          run: |
+            crashtest.exe
+          shell : cmd
+
