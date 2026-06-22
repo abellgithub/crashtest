@@ -11,7 +11,7 @@ jobs:
         - uses: ilammy/msvc-dev-cmd@v1
         - name: compile
           run: |
-            cl /std:c++17 /Fe:crashtest t.cpp
+            cl /std:c++17 /Fe:crashtest t.cpp Stackwalker.cpp
         - name: run
           run: |
             crashtest.exe
