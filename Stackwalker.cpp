@@ -1591,7 +1591,7 @@ void StackWalker::OnLoadModule(LPCSTR    img,
         img, mod, (LPVOID)baseAddr, size, result, symType, pdbName, v1, v2, v3, v4);
   }
   buffer[STACKWALK_MAX_NAMELEN - 1] = 0; // be sure it is NULL terminated
-  OnOutput(buffer);
+//  OnOutput(buffer);
 }
 
 void StackWalker::OnCallstackEntry(CallstackEntryType eType, CallstackEntry& entry)

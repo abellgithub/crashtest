@@ -28,8 +28,7 @@ int main()
     protected:
         virtual void OnOutput(LPCSTR text)
         {
-            std::cerr << std::string(text) << "!\n";
-            StackWalker::OnOutput(text);
+            std::cerr << std::string(text);
         }
     };
 
